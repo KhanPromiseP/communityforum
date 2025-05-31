@@ -13,4 +13,7 @@ const topicSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
+
+TopicSchema.index({ title: 'text', description: 'text' });  // for searching functionality
+
 module.exports = mongoose.model('Topic', topicSchema);

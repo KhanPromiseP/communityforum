@@ -23,6 +23,6 @@ const postSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 
-PostSchema.index({ content: 'text' });  // for searching functionality
+postSchema.index({ content: 'text' });  // for searching functionality
 
 module.exports = mongoose.model('Post', postSchema);

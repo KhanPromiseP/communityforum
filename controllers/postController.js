@@ -1,6 +1,6 @@
 const Post = require('../models/Post');
 const Reply = require('../models/Reply');
-const Topics = require('../models/Topic');
+const Topic = require('../models/Topic');
 
 // @desc    Create a post under a topic
 exports.createPost = async (req, res) => {
@@ -50,6 +50,8 @@ exports.getPostWithReplies = async (req, res) => {
 
     res.json({ post, replies });
   } catch (error) {
+    // THIS LOG THE ACTUAL ERROR
+    console.error('Error in getPostWithReplies:', error);
     res.status(500).json({ message: 'Error fetching post and replies' });
   }
 };

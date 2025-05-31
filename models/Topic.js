@@ -13,4 +13,4 @@ const topicSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
-module.exports = mongoose.model('Topics', topicSchema);
+module.exports = mongoose.model('Topic', topicSchema);
